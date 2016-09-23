@@ -1,0 +1,11 @@
+.app {
+  min-width: 1080px;
+  font-family: 'microsoft yahei';
+  font-size: 14px;
+}
+.app-main {
+  margin-top: 50px;
+  margin-left: 50px;
+  padding-top: 10px;
+  padding-left: 10px;
+}

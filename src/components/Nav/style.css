@@ -1,0 +1,28 @@
+.nav {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  background: rgb(43, 55, 76);
+}
+.menu {
+  text-align: center;
+}
+.menu a {
+  display: block;
+  padding: 20px 0;
+  color: #dae7ff;
+  text-decoration: none!important;
+}
+.menu a:hover {
+
+}
+.menu i {
+  display: block;
+  font-size: 18px;
+}
+.active {
+  background: rgb(60, 80, 113);
+  color: rgb(85, 173, 222);
+}

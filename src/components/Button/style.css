@@ -1,0 +1,28 @@
+.btn {
+  padding: 8px 15px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn[disabled] {
+  cursor: default;
+}
+
+/* status */
+.normal {
+  background: #eee;
+}
+.primary {
+  background: #009fff;
+}
+.info {
+  background: lightblue;
+}
+.success {
+  background: limegreen;
+}
+.danger {
+  background: red;
+}

@@ -1,0 +1,10 @@
+.toolbar {
+
+}
+.title,
+.selectsWrap,
+.buttonsWrap,
+.search,
+.right {
+  display: inline-block;
+}
