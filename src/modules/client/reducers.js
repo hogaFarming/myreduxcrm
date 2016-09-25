@@ -27,10 +27,10 @@ export default function clientReducer(state = defaultState, action) {
     return {
       ...state,
       pending: false,
-      pager: action.pager,
+      pager: action.data.pager,
       keyword: '',
-      fields: [],
-      data: action.data
+      fields: action.data.fields,
+      data: action.data.data
     };
   case REQUEST_CLIENT_LIST_FAIL:
     return { ...state, pending: false, err: action.err };

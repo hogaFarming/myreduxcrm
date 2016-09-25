@@ -53,22 +53,27 @@ class Client extends Component {
 
   }
   onPageChange(page) {
-    this.props.fetchClientList(page, 1);
+    const params = {
+      page: page,
+      size: 1
+    };
+    this.props.fetchClientList(params);
   }
   renderMenu() {
-    const selects = MENUS.map(menu => {
+    const selects = MENUS.map((menu, i) => {
       const options = menu.options.map(option => {
         return (
-          <option value={option.value}>{option.title}</option>
+          <option key={option.value} value={option.value}>{option.title}</option>
         );
       });
       return (
-        <select>{options}</select>
+        <select key={i}>{options}</select>
       );
     });
     return selects;
   }
   render() {
+    const { fields, data } = this.props;
     const { page, size, total } = this.props.pager;
     return (
       <div>
@@ -85,8 +90,8 @@ class Client extends Component {
           <button onClick={this.addClient}>新增客户</button>
         </div>
         <TableWithPager
-          fields={this.state.fields}
-          data={this.state.data}
+          fields={fields}
+          data={data}
           selectable={true}
           pagerConfig={{
             page: page,
@@ -101,7 +106,7 @@ class Client extends Component {
 }
 
 const ClientContainer = connect(
-  state => ({ client: state.client }),
+  state => state.client,
   dispatch => bindActionCreators(clientAcitons, dispatch)
 )(Client);
 

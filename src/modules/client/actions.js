@@ -6,7 +6,7 @@ export function fetchClientList({ page, size }) {
     requestClientList();
     
     return api.getListData(page, size)
-      .then((fields, data, total) => {
+      .then(({fields, data, total}) => {
         dispatch(requestClientListSucc({
           fields,
           data,
