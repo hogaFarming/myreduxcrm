@@ -3,10 +3,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as clientAcitons from './actions';
 
-import ToolBar from '../../components/ToolBar';
+// import ToolBar from '../../components/ToolBar';
 import TableWithPager from '../../components/TableWithPager';
-
-import * as clientApi from './api/client';
 
 const MENUS = [
   {
@@ -17,13 +15,6 @@ const MENUS = [
     ],
     changeHandler: null
   }
-];
-const BUTTONS = [
-  { title: '高级搜索', click: f => f },
-  { title: '新增', click: f => f },
-  { title: '合并客户', click: f => f },
-  { title: '导入客户', click: f => f },
-  { title: '导出客户', click: f => f }
 ];
 
 class Client extends Component {
@@ -50,6 +41,9 @@ class Client extends Component {
     this.onPageChange(1);
   }
   onMenuChange() {
+
+  }
+  onSearch(event) {
 
   }
   onPageChange(page) {
